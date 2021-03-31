@@ -91,7 +91,18 @@ An average recall score of 0.67 means that 67% of class predictions made out of 
 #### SMOTEENN
 The SMOTEENN algorithm is a combination of SMOTE and Edited Nearest Neighbor (ENN) algorithms.  In simple terms, SMOTEENN randomly oversamples the minority class (high_risk) and undersamples the majority class (low_risk) 
 
-Once the data were balanced and trained,
+Once the data were balanced and trained, the SMOTEEN algorithm gave the following scores:
+Balanced Accuracy: 0.644
+
+![class_report](https://user-images.githubusercontent.com/73897240/113209206-c1af8580-9240-11eb-8ca7-89ff9fb0aff0.PNG)
+
+SMOTEENN's balanced accuracy score was 0.644, which means 64.4% of class predictions were correct and 35.6% were incorrect.
+
+An average precision score of 0.99 means the SMOTEENN algorithm predicted positive class predictions 99% of the time on thie dataset.
+
+An average recall score of 0.67 means that 67% of class predictions made out of all positive examples in the dataset were correct, whereas 33% were incorrect.
 
 
+### Ensemble Learners
+#### Balanced Random Forest Classifier
 
