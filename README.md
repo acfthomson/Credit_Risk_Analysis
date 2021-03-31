@@ -66,10 +66,32 @@ The balanced accuracy score for this model means that 64.8% of classes are corre
 
 An average precision score of 0.99 means that this model predicted positive class predictions 99% of the time.
 
-An average recall score of 0.64 means that 64% of class predictions were correct and 36% were incorrect.
+An average recall score of 0.64 means that 64% of class predictions made out of all positive examples in the dataset were correct and 36% were incorrect.
 
 Comparing the performance of the naive random oversampling and SMOTE oversampling models, they appeared to perform about the same.
 
+
+### Undersampling Algorithm
+#### ClusterCentroids
+The ClusterCentroid algorithm provides an efficient way to represent the data cluster with a reduced number of samples.  A cluster is a group of data points grouped together because of certain similarities.  This algorithm does this by performing K-means clustering on the majority class, low_risk, and then creates new data points which are averages of the coordinates of the generated clusters.
+
+Once the data were balanced and trained, ClusterCentroids undersampling gave the following scores:
+Balanced Accuracy: 0.644
+
+![class_report](https://user-images.githubusercontent.com/73897240/113206456-7a73c580-923d-11eb-8d64-76db77468089.PNG)
+
+The balanced accuracy score for this model was 0.644, which means that 35.6% of classes are incorrect and 64.4% are correct.
+
+An average precision score of 0.99 means the ClusterCentroid algorithm predicted positive class predictions 99% of the time on thie dataset.
+
+An average recall score of 0.67 means that 67% of class predictions made out of all positive examples in the dataset were correct, whereas 33% were incorrect.
+
+
+### Combination Sampling
+#### SMOTEENN
+The SMOTEENN algorithm is a combination of SMOTE and Edited Nearest Neighbor (ENN) algorithms.  In simple terms, SMOTEENN randomly oversamples the minority class (high_risk) and undersamples the majority class (low_risk) 
+
+Once the data were balanced and trained,
 
 
 
