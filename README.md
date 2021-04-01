@@ -4,8 +4,13 @@
 Data analysts were asked to examine credit card data from peer-to-peer lending services company LendingClub in order to determin credit risk.  Supervised machine learning was employed in order to determine which model would perform the best against an unbalanced dataset.  Data analysts trained and evaluated several models to predict credit risk. 
 
 
-## Dependencies
+## Resources
 - [LoanStats_2019Q1.csv](https://github.com/acfthomson/Credit_Risk_Analysis/tree/main/Resources)
+- [imbalanced-learn documentation](https://imbalanced-learn.org/stable/index.html)
+- [scikit-learn documentation](https://scikit-learn.org/stable/supervised_learning.html)
+
+
+## Dependencies
 - Jupyter Notebook
 - Python v3.x
   -  Dependencies
@@ -98,11 +103,28 @@ Balanced Accuracy: 0.644
 
 SMOTEENN's balanced accuracy score was 0.644, which means 64.4% of class predictions were correct and 35.6% were incorrect.
 
-An average precision score of 0.99 means the SMOTEENN algorithm predicted positive class predictions 99% of the time on thie dataset.
+An average precision score of 0.99 means the SMOTEENN algorithm predicted positive class predictions 99% of the time on this dataset.
 
 An average recall score of 0.67 means that 67% of class predictions made out of all positive examples in the dataset were correct, whereas 33% were incorrect.
 
 
 ### Ensemble Learners
 #### Balanced Random Forest Classifier
+The balanced random forest classifier is an ensemble method where each tree in the ensemble is built from a sample drawn with replacement (bootstrap sample) from the training set. Instead of using all the features, a random subset of features is selected,  which further randomizes the tree.  As a result, the bias of the forest increases slightly, but since the less correlated trees are averaged, its variance decreases, which results in an overall better model.
+
+Once the data were balanced and trained, the balanced random forest algorithm gave the following scores:
+Balanced Accuracy: 0.788
+
+![class_report](https://user-images.githubusercontent.com/73897240/113342656-be79cf80-92fc-11eb-9e79-9c3c7eb630f2.PNG)
+
+This algorithm's balanced accuracy score is 0.788, which means nearly 79% of class predictions were correct and 21% were incorrect.
+
+Balanced random forest's average precision score of 0.99 means that this algorithm predicted positive class predictions 99% of the time on this dataset.
+
+An average recall score of 0.91 means that 91% of class predictions made of out all positive examples in this dataset were correct, where as 9% were incorrect.
+
+
+#### Easy Ensemble AdaBoost Classifier
+
+
 
